@@ -22,7 +22,6 @@
     }
   ],
   "require": {
-    "illuminate/support": "5.*",
     "predictionio/predictionio": "0.8.*"
   },
   
