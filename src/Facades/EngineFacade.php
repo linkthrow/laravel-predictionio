@@ -1,4 +1,4 @@
-<?php namespace Potelo\LaravelPredictionIO\Facades;
+<?php namespace LinkThrow\LaravelPredictionIO\Facades;
 
 use Illuminate\Support\Facades\Facade as IlluminateFacade;
 
@@ -9,7 +9,7 @@ class EngineFacade extends IlluminateFacade {
      *
      * @return string
      */
-    protected static function getFacadeAccessor() { return 'engineclient'; }
+    protected static function getFacadeAccessor() { return 'EngineClient'; }
 
 
 }

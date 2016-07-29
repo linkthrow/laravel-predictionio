@@ -1,9 +1,10 @@
-<?php namespace Potelo\LaravelPredictionIO\Provider;
+<?php namespace LinkThrow\LaravelPredictionIO\Provider;
 
 use Config;
 use Illuminate\Support\ServiceProvider;
 use predictionio\EngineClient;
 use predictionio\EventClient;
+use App;
 
 class PredictionIOServiceProvider extends ServiceProvider {
 
@@ -28,15 +29,14 @@ class PredictionIOServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        $this->app['eventclient'] = $this->app->share(function($app)
+        $this->app['EventClient'] = $this->app->share(function($app)
         {
-            return new EventClient(Config::get('services.predictionio.key'), Config::get('services.predictionio.url'));
+            return new EventClient(Config::get('services.predictionio.key'), Config::get('services.predictionio.eventurl'));
         });
-        $this->app['engineclient'] = $this->app->share(function($app)
+        $this->app['EngineClient'] = $this->app->share(function($app)
         {
-            return new EngineClient(Config::get('services.predictionio.engine_url'));
+            return new EngineClient(Config::get('services.predictionio.engineurl'));
         });
-
 
     }
     /**
@@ -46,7 +46,7 @@ class PredictionIOServiceProvider extends ServiceProvider {
      */
     public function provides()
     {
-        return array('eventclient','engineclient');
+        return array('EventClient','EngineClient');
     }
 
 }

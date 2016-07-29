@@ -1,7 +1,7 @@
 {
   "license": "MIT",
-  "name": "potelo/laravel-predictionio",
-  "description": "Laravel wrapper for PredictionIO v0.9.*",
+  "name": "linkthrow/laravel-5-predictionio",
+  "description": "Laravel 5 wrapper for PredictionIO v0.9.*",
   "keywords": [
     "laravel",
     "predictionio",
@@ -10,6 +10,11 @@
     "api"
   ],
   "authors": [
+    {
+      "name": "Hussan Choudhry",
+      "email": "hussan@uselinkthrow.com",
+      "role": "Developer"
+    },
     {
       "name": "Bruno Cabral",
       "email": "bruno@potelo.com.br",
@@ -23,7 +28,7 @@
   
   "autoload": {
     "psr-4": {
-      "Potelo\\LaravelPredictionIO\\": "src"
+      "LinkThrow\\LaravelPredictionIO\\": "src"
     }
   },
   "minimum-stability": "dev"
